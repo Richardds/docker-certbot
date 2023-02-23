@@ -43,7 +43,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           build-args: |
-            ALPINE_VERSION=3.16
+            ALPINE_VERSION=3.17
+            CERTBOT_VERSION=1.32
+            CERTBOT_CLOUDFLARE_VERSION=2.3
           push: true
           tags: |
             richardboldis/certbot:latest

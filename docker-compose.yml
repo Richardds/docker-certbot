@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
       context: .
       args:
-        - ALPINE_VERSION=3.16
+        - ALPINE_VERSION=3.17
+        - CERTBOT_CLOUDFLARE_VERSION=2.3
     volumes:
       - ./certificates:/etc/letsencrypt
       - ./cloudflare.ini:/cloudflare.ini:ro
