@@ -18,6 +18,7 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
 
   docker:
+    needs: lint
     runs-on: ubuntu-22.04
     env:
       DOCKER_BUILD_ARGS: |
