@@ -6,8 +6,15 @@ on:
       - '*'
 
 jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      -
+        name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       -
         name: Setup Docker
